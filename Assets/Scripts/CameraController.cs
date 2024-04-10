@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
     public float minY = 10f;
     public float maxY = 80f;
 
-    private bool doMovement = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +21,6 @@ public class CameraController : MonoBehaviour
     {
         if(GameManager.GameIsOver){
             this.enabled = false;
-            return;
-        }
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            doMovement = !doMovement;
-        }
-
-        if(!doMovement){
             return;
         }
 
